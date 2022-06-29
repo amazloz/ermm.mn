@@ -1,0 +1,120 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: auto;
+    align-items: center;
+    min-height: 100vh;
+    background-color: azure;
+}
+/* NAVIGATION BAR */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 10%;   
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: 0.5s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+    font-size: 20px;
+}
+
+/* MAIN */
+.home{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.home h1{
+    padding-left: 80px;
+    padding-top: 50px;
+    font-size: 35px;
+    transition: 1s;
+}
+
+.content{
+    padding: 80px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    height: 500px;
+    width: 250px;
+    background-color: #000;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.text{
+    color: #ffffff;
+    font-weight: 50px;
+}
+
+.box:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.booking{
+    background-color: mediumspringgreen;
+    width: 100%;
+    height: 100%;
+}
+
+.discount{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.soon{
+    background-color: orchid;
+    width: 100%;
+    height: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px){
+    header{
+        justify-content: space-between;
+    }
+    .home{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}

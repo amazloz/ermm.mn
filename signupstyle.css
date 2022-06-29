@@ -1,0 +1,118 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: auto;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+/* NAVIGATION BAR */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 10%;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: #0088a9;
+    font-size: 18px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.center .sign{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-top: 30px;
+    height: 550px;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 1),
+                4px 4px 10px rgba(255, 255, 255, 1);
+}
+.center .sign .name{
+    height:30px;
+    width: 35%;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+.center .sign .signin{
+    height: 50px;
+    width: 80%;
+    border-radius: 5px;
+    border-color: gray;
+    margin-top: 30px;
+    align-self: center;
+}
+.center .sign .birthday{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.center .sign .birthday p{
+    font-size: 14px;
+}
+select{
+    height: 30px;
+    width: 103px;
+}
+.center .sign .gender{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.center .sign .gender p{
+    font-size: 14px;
+}
+.center .sign h1{
+    text-align-last: center;
+}
+.center .sign button{
+    margin-top: 15px;
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    align-self: center;
+}
+.center .sign a{
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    align-self: center;   
+    border-bottom: 2px solid #ccc;  
+}
+/* RESPONSIVE */
+@media screen and (max-width: 1024px){
+    header{
+        justify-content: space-between;
+    }
+    .center{
+        flex-direction: column;
+        align-items: center;
+    }
+}
