@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/test.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="tabContainer">
+        <h1>Мэдээлэл</h1>
+        <div class="buttonContainer">
+            <button onclick="showPanel(0, '#f44336')">London</button>
+            <button onclick="showPanel(1, '#4caf50')">Paris</button>
+            <button onclick="showPanel(2, '#2196f3')">Tokyo</button>
+            <button onclick="showPanel(3, '#ff5722')">Moscow</button>
+        </div>
+        <div class="tabPanel">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div class="tabPanel">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div class="tabPanel">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div class="tabPanel">
+            <h3>Moscow</h3>
+            <p>Moscow is the capital of Russia.</p>
+        </div>
+    </div>
+    <script>
+        var tabButtons = document.querySelectorAll(".tabContainer .buttonContainer button");
+        var tabPanels = document.querySelectorAll(".tabContainer .tabPanel");
+        function showPanel(panelIndex, colorCode) {
+            tabButtons.forEach(function (node) {
+                node.style.backgroundColor = "";
+                node.style.color = "";
+            });
+            tabButtons[panelIndex].style.backgroundColor = colorCode;
+            tabButtons[panelIndex].style.color = "white";
+            tabPanels.forEach(function (node) {
+                node.style.display = "none";
+            });
+            tabPanels[panelIndex].style.display = "block";
+            tabPanels[panelIndex].style.backgroundColor = colorCode;
+        }
+        showPanel(0, 'f44336')</script>
+
+</body>
+
+</html>

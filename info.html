@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>
+        ASS
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/infostyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="info.html">Мэдээлэл</a></li>
+                <li><a href="#">Урамшуулал</a></li>
+                <li><a href="#">Тун удахгүй</a></li>
+                <li><a href="signin.html">Нэвтрэх</a></li>
+                <li><a href="signup.html">Бүртгүүлэх</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="info">
+        <h1>Мэдээлэл</h1>
+        <div class="tab">
+            <button class="tablink" onclick="opentab(event, 'London')">London</button>
+            <button class="tablink" onclick="opentab(event, 'Paris')">Paris</button>
+            <button class="tablink" onclick="opentab(event, 'Tokyo')">Tokyo</button>
+        </div>
+        <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+    <script>
+        function opentab(evt, name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <div class="discount">
+    </div>
+    <div class="soon">
+    </div>
+</body>
+
+</html>
